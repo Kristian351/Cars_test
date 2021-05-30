@@ -7,6 +7,6 @@ public class BrandDto {
 
 
     public static Object findByString(String name) {
-        return String;
+        return name;
     }
 }
