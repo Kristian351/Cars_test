@@ -12,8 +12,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "yearModels")
-public class YearModel {
+@Table(name = "manufactures")
+public class Manufacture {
 
     public static Long getId;
     public static Integer getNumber;

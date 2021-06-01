@@ -28,5 +28,5 @@ public class Brand {
 
     @JoinColumn(name = "yearModels_id")
     @ManyToMany
-    private Set<YearModel> yearModels;
+    private Set<Manufacture> manufactures;
 }

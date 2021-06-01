@@ -32,7 +32,7 @@ public class CarPrice {
 
     @JoinColumn(name = "yearModel_id")
     @ManyToMany
-    private YearModel yearModel;
+    private Manufacture manufacture;
 
     @Lob
     private String description;
