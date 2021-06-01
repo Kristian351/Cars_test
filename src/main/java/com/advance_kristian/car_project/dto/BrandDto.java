@@ -1,21 +1,26 @@
 package com.advance_kristian.car_project.dto;
 
+import com.advance_kristian.car_project.model.Manufacture;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class BrandDto {
-    private Long id;
+
     private String name;
 
+    private Long id;
 
-    public static Object findByString(String name) {
-        return name;
-    }
+    private String model;
+
+    private Set<Manufacture> manufactures;
+
 }
 

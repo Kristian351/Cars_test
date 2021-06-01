@@ -15,9 +15,10 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "brands")
-
 public class Brand {
 
+    public static Long getId;
+    public static String getString;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,7 +27,7 @@ public class Brand {
     @Column(unique = true,nullable = false)
     private String name;
 
-    @JoinColumn(name = "yearModels_id")
+    @JoinColumn(name = "manufacture_id")
     @ManyToMany
     private Set<Manufacture> manufactures;
 }

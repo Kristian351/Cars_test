@@ -1,6 +1,6 @@
 package com.advance_kristian.car_project.controller;
 
-import com.advance_kristian.car_project.dto.Manufacture;
+import com.advance_kristian.car_project.dto.ManufactureDto;
 import com.advance_kristian.car_project.service.ManufactureService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +19,8 @@ public class ManufactureController {
     }
 
     @GetMapping(value = "/{number}")
-    public ResponseEntity<Manufacture> findByNumber(@PathVariable Integer number){
+    public ResponseEntity<ManufactureDto> findByNumber(@PathVariable Integer number){
 
         return ResponseEntity.ok((ManufactureService.findByNumber(number)));
     }
-
 }

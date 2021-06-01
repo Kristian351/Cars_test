@@ -30,13 +30,10 @@ public class CarPrice {
     @ManyToMany
     private Set<Brand> brands;
 
-    @JoinColumn(name = "yearModel_id")
+    @JoinColumn(name = "manufacture_id")
     @ManyToMany
     private Manufacture manufacture;
 
     @Lob
     private String description;
-
-
-
 }

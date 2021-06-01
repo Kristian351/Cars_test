@@ -23,7 +23,7 @@ public class Manufacture {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(unique = true, nullable = false)
     private Integer number;
 
 

@@ -1,6 +1,7 @@
 package com.advance_kristian.car_project.controller;
 
 import com.advance_kristian.car_project.dto.BrandDto;
+import com.advance_kristian.car_project.model.Brand;
 import com.advance_kristian.car_project.service.BrandService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,7 @@ public class BrandController {
     }
 
     @GetMapping(value = "/{String}")
-    public ResponseEntity<Object> findByString(@PathVariable String name) {
+    public ResponseEntity<Brand> findByString(@PathVariable String name) {
 
         return ResponseEntity.ok((BrandDto.findByString(name)));
     }

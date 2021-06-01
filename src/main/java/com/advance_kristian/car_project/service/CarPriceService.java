@@ -9,13 +9,16 @@ import javax.validation.constraints.NotNull;
 
 @Service
 public class CarPriceService {
-
     private final CarPriceRepository carPriceRepository;
     private final BrandService brandService;
+    private final ManufactureService manufactureService;
+    private final CarPriceService carPriceService;
 
-    public CarPriceService(CarPriceRepository carPriceRepository, BrandService brandService) {
+    public CarPriceService(CarPriceRepository carPriceRepository, BrandService brandService, ManufactureService manufactureService, CarPriceService carPriceService) {
         this.carPriceRepository = carPriceRepository;
         this.brandService = brandService;
+        this.manufactureService = manufactureService;
+        this.carPriceService = carPriceService;
     }
 
     public void save(@NotNull CarPriceDto carPriceDto) {
