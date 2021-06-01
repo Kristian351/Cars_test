@@ -7,5 +7,7 @@ import java.util.Optional;
 
 public interface YearModelRepository extends JpaRepository<YearModel, Long> {
 
-    public Optional<YearModel> findByNumber(Integer number);
+    public static Optional<YearModel> findByNumber(Integer number) {
+        return null;
+    }
 }

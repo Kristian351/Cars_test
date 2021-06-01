@@ -7,7 +7,8 @@ import java.util.Optional;
 
 public interface BrandRepository extends JpaRepository<Brand,Long> {
 
-    public Optional<Brand> findByNumber(String name);
+    static Optional<Object> findByString(String name) {
+        return null;
+    }
 
-    Optional<Object> findByString();
 }

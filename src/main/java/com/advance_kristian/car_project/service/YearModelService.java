@@ -2,7 +2,7 @@ package com.advance_kristian.car_project.service;
 
 
 import com.advance_kristian.car_project.dto.YearModelDto;
-import com.advance_kristian.car_project.exception.ThrowNotFoundException;
+import com.advance_kristian.car_project.exception.RecordNotFoundException;
 import com.advance_kristian.car_project.model.YearModel;
 import com.advance_kristian.car_project.repository.YearModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @Service
 public class YearModelService {
 
-    private static YearModelRepository yearModelRepository = null;
+    private YearModelRepository yearModelRepository;
 
     @Autowired
     public YearModelService(YearModelRepository yearModelRepository) {
@@ -22,8 +22,8 @@ public class YearModelService {
 
     }
     public static YearModelDto findByNumber(@NotNull Integer number) {
-        yearModelRepository.findByNumber(number)
-                .orElseThrow(()-> new ThrowNotFoundException(String.format("Year of this model is not found", number)));
+        YearModelRepository.findByNumber(number)
+                .orElseThrow(()-> new RecordNotFoundException(String.format("Year of this model is not found", number)));
 
         return YearModelDto.builder()
                 .id(YearModel.getId)

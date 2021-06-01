@@ -15,8 +15,8 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "priceOfCars")
-public class PriceOfCar {
+@Table(name = "car_prices")
+public class CarPrice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
